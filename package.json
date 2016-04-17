@@ -1,0 +1,24 @@
+{
+  "name": "jscow-node-editor-page",
+  "description": "jsCow - Node Editor Demo - Javascript Component Framework",
+  "version": "0.0.1",
+  "license": "GPL-3.0+",
+  "readme": "README.md",
+  "author": "Mario Linz <jscow@gmx.de>",
+  "contributors": [
+    {
+      "name": "Mario Linz",
+      "email": "jscow@gmx.de"
+    }
+  ],
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsCow/jscow-node-editor-page"
+  }
+}
