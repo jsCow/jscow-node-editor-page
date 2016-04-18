@@ -10,7 +10,7 @@ if (Meteor.isClient) {
                 { title: 'Contact', route: 'contact' }
             ];
         }
-
+        
     });
 
 }

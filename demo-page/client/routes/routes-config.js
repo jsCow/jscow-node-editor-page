@@ -1,7 +1,7 @@
 
 /** default layout */
 Router.configure({
-  layoutTemplate: 'layoutDefault',
+  layoutTemplate: 'layout-default',
   notFoundTemplate: '404',
   defaultBreadcrumbLastLink: false
 });

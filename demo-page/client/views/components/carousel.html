@@ -1,0 +1,33 @@
+<template name="carousel">
+    <section id="main-slider" class="no-margin">
+        <div class="carousel slide">
+            <ol class="carousel-indicators">
+                {{#each items}}
+                    <li data-target="#main-slider" data-slide-to="{{index}}" class="active"></li>
+                {{/each}}
+            </ol>
+            <div class="carousel-inner">
+                {{#each items}}
+                    <div class="item active" style="background-image: url({{imgsrc}})">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="carousel-content centered">
+                                        <h2 class="animation animated-item-1">{{title}}</h2>
+                                        <p class="animation animated-item-2">{{subtitle}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+            <i class="fa fa-arrow-left"></i>
+        </a>
+        <a class="next hidden-xs" href="#main-slider" data-slide="next">
+            <i class="fa fa-arrow-right"></i>
+        </a>
+    </section>
+</template>
