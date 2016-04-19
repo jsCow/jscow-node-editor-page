@@ -1,14 +1,14 @@
 <template name="carousel">
-    <section id="main-slider" class="no-margin">
+    <section id="{{carouselID}}" class="no-margin">
         <div class="carousel slide">
             <ol class="carousel-indicators">
                 {{#each items}}
-                    <li data-target="#main-slider" data-slide-to="{{index}}" class="active"></li>
+                    <li data-target="#{{carouselID}}" data-slide-to="{{index}}" {{indicatorAttributes}}></li>
                 {{/each}}
             </ol>
             <div class="carousel-inner">
                 {{#each items}}
-                    <div class="item active" style="background-image: url({{imgsrc}})">
+                    <div {{attributes}} style="background-image: url({{imgsrc}})">
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-12">
@@ -23,10 +23,10 @@
                 {{/each}}
             </div>
         </div>
-        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+        <a class="prev hidden-xs" href="#{{carouselID}}" data-slide="prev">
             <i class="fa fa-arrow-left"></i>
         </a>
-        <a class="next hidden-xs" href="#main-slider" data-slide="next">
+        <a class="next hidden-xs" href="#{{carouselID}}" data-slide="next">
             <i class="fa fa-arrow-right"></i>
         </a>
     </section>

@@ -8,5 +8,5 @@ Router.route('/', {
 /** dashboard */
 Router.route('/contact', {
   name: 'contact',
-  title: 'Kontakt'
+  title: 'Contact'
 });
