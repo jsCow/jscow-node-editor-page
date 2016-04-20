@@ -1,33 +1,52 @@
 <template name="carousel">
-    <section id="{{carouselID}}" class="no-margin">
-        <div class="carousel slide">
-            <ol class="carousel-indicators">
-                {{#each items}}
-                    <li data-target="#{{carouselID}}" data-slide-to="{{index}}" class="{{status}}"></li>
-                {{/each}}
-            </ol>
-            <div class="carousel-inner">
-                {{#each items}}
-                    <div class="item {{status}}" style="background-image: url({{imgsrc}})">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="carousel-content centered">
-                                        <h2 class="animation animated-item-1">{{title}}</h2>
-                                        <p class="animation animated-item-2">{{subtitle}}</p>
-                                    </div>
-                                </div>
+  <section id="main-slider" class="no-margin">
+    <div id="{{carouselID}}" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        {{#each $mapped items}}
+          {{#if $first}}
+            <li data-target="#{{carouselID}}" data-slide-to="{{@index}}" class="active"></li>
+          {{else}}
+            <li data-target="#{{carouselID}}" data-slide-to="{{@index}}"></li>
+          {{/if}}
+        {{/each}}
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        {{#each $mapped items}}
+          {{#if $first}}
+            <div class="item active" style="background-image: url({{imgsrc}})">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="carousel-content centered">
+                                <h2 class="animation animated-item-1">{{title}}</h2>
+                                <p class="animation animated-item-2">{{subtitle}}</p>
                             </div>
                         </div>
                     </div>
-                {{/each}}
+                </div>
             </div>
-        </div>
-        <a class="prev hidden-xs" href="#{{carouselID}}" data-slide="prev">
-            <i class="fa fa-arrow-left"></i>
-        </a>
-        <a class="next hidden-xs" href="#{{carouselID}}" data-slide="next">
-            <i class="fa fa-arrow-right"></i>
-        </a>
-    </section>
+          {{else}}
+            <div class="item" style="background-image: url({{imgsrc}})">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="carousel-content centered">
+                                <h2 class="animation animated-item-1">{{title}}</h2>
+                                <p class="animation animated-item-2">{{subtitle}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          {{/if}}
+        {{/each}}
+      </div>
+      <a class="prev hidden-xs" href="#{{carouselID}}" role="button" data-slide="prev">
+        <i class="fa fa-angle-left"></i>
+      </a>
+      <a class="next hidden-xs" href="#{{carouselID}}" role="button" data-slide="next">
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </div>
+  </section>
 </template>

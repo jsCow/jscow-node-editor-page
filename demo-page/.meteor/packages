@@ -22,3 +22,4 @@ twbs:bootstrap
 less
 fortawesome:fontawesome
 iron:router
+raix:handlebar-helpers
