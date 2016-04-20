@@ -3,12 +3,12 @@
         <div class="carousel slide">
             <ol class="carousel-indicators">
                 {{#each items}}
-                    <li data-target="#{{carouselID}}" data-slide-to="{{index}}" {{indicatorAttributes}}></li>
+                    <li data-target="#{{carouselID}}" data-slide-to="{{index}}" class="{{status}}"></li>
                 {{/each}}
             </ol>
             <div class="carousel-inner">
                 {{#each items}}
-                    <div {{attributes}} style="background-image: url({{imgsrc}})">
+                    <div class="item {{status}}" style="background-image: url({{imgsrc}})">
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-12">
