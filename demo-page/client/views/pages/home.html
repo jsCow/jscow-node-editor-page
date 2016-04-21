@@ -1,4 +1,41 @@
 <template name="home">
   {{> carousel}}
   {{> githubbar}}
+  
+  <div class="section section-white">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-4 col-sm-6">
+          <div class="service-wrapper">
+            <i class="fa fa-home"></i>
+            <h3>jsCow Node Editor</h3>
+            <p>jsCow node editor allows to manipulate a process based on nodes, ports and connections within a independent environment.</p>
+            <a href="{{pathFor route='demo'}}" class="btn">Read more</a>
+          </div>
+        </div>
+        
+        <div class="col-md-4 col-sm-6">
+          <div class="service-wrapper">
+            <i class="fa fa-cube"></i>
+            <h3>Nodes, Ports and Connections</h3>
+            <p>Learn more about describing your own nodes, ports and connections to use it in a process.<br/><br/></p>
+            <a href="{{pathFor route='nodes'}}" class="btn">Read more</a>
+          </div>
+        </div>
+        
+        <div class="col-md-4 col-sm-6">
+          <div class="service-wrapper">
+            <i class="fa fa-cube"></i>
+            <h3>Process and Node types</h3>
+            <p>Learn more about how you can describe a complete process by one simple json structure.<br/><br/></p>
+            <a href="{{pathFor route='process'}}" class="btn">Read more</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  
 </template>

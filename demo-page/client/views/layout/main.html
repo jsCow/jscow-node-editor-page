@@ -1,4 +1,41 @@
 <template name="layout-default">
   {{> navigation}}
+  
   {{> yield}}
+  
+  <div class="footer">
+    <div class="container">
+  
+      <div class="row">
+    
+        <div class="col-footer col-md-4 col-xs-6">
+          <h3>Contact Me</h3>
+          <p class="contact-us-details">
+              <b>Address:</b> Triftgasse 12, 99094 Erfurt-Molsdorf<br/>
+              <b>Phone:</b> +49 176 96102427<br/>
+              <b>Email:</b> <a href="mailto:jscow@gmx.de">jscow@gmx.de</a>
+            </p>
+        </div>				
+        <div class="col-footer col-md-4 col-xs-6">
+          <h3>Technology</h3>
+          <p><a href="https://jquery.com" target="_blank">jQuery</a> - Cross Browser DOM Manipulation Framework</p>
+          <p><a href="https://jsplumbtoolkit.com" target="_blank">jsPlumb</a> - Declarative Connectivity Framework</p>
+          <p><a href="http://www.jscow.de" target="_blank">jsCow</a> - Javascript Component Framework</p>
+        </div>
+        <div class="col-footer col-md-4 col-xs-6">
+          <h3>Licence</h3>
+          <p>GNU GENERAL PUBLIC LICENSE</p>
+          <p>Version 3, 29 June 2007</p>
+          <p>Copyright (C) 2007 Free Software Foundation, Inc. <a href="http://fsf.org" target="_blank">http://fsf.org</a> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.</p>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer-copyright">&copy; 2016 <a href="https://github.com/jsCow/jscow-node-editor" target="_blank">jsCow Node Editor</a>. By <a href="http://www.gelight.de" target="_blank">GELight</a>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </template>
