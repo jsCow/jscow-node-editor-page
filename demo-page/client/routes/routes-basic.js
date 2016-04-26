@@ -5,8 +5,14 @@ Router.route('/', {
   title: 'Home'
 });
 
-/** dashboard */
+/** contact */
 Router.route('/contact', {
   name: 'contact',
   title: 'Contact'
+});
+
+/** readme */
+Router.route('/readme', {
+  name: 'readme',
+  title: 'Readme'
 });

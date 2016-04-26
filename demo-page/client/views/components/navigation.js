@@ -7,7 +7,8 @@ if (Meteor.isClient) {
         items: function () {
             return [
                 { title: 'Home', route: 'home', attributes: { class: 'active' } },
-                { title: 'Contact', route: 'contact' }
+                { title: 'Readme', route: 'readme', attributes: {} },
+                { title: 'Contact', route: 'contact', attributes: {} }
             ];
         }
         
