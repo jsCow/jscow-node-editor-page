@@ -1,35 +1,15 @@
 if (Meteor.isClient) {
 
+    Template.readmeMarkdown.created = function() {
+      var url =  'http://raw.githubusercontent.com/jsCow/jscow-node-editor/master/README.md';
+      Meteor.call('getRemoteContent', url, function (error, result) {
+        Session.set('markdownReadme', result);
+      });
+    },
+
     Template.readmeMarkdown.helpers({
-        
-        readme: function() {
-            
-            var content = '';
-            
-            $.ajax({
-                type: "GET",
-                url: 'https://raw.githubusercontent.com/jsCow/jscow-node-editor/master/README.md',
-                dataType: 'text/plain',
-                contentType: 'text/plain',
-                accepts: 'text/plain',
-                success: function(data) {
-                    content = data;
-                },
-                error: function(response) {
-                    return content = response.responseText;
-                }
-            });
-            
-            return content;
-            
-        },
-        
-    });
-
-}
-
-if (Meteor.isServer) {
-    Meteor.startup(function () {
-        // code to run on server at startup
+      readme: function() {
+        return Session.get('markdownReadme');
+      }
     });
 }
